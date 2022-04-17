@@ -3,25 +3,37 @@
 
 import React, {Component} from 'react';
 import AccountBalance from './AccountBalance';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 class Home extends Component {
   render() {
     return (
-      <div>
-        <img src="https://picsum.photos/200/200" alt="bank"/>
-        <h1>Bank of React</h1>
+    
+           <div>
+              <br></br><br></br>
+              <h1>Bank of React</h1>
+              <br></br><br></br>
+              <br></br><br></br>
+                <div class="container">
+                  <span class="react-logo">
+			            <span class="nucleo"></span>
+		              </span>
+                </div>
 
-        <Link to="/userProfile">User Profile</Link>
-        <br/>
-        <Link to="/login">Login</Link>
-        <br/>
-        <Link to="">Credits (to be implemented in the Assignment)</Link>
-        <br/>
-        <Link to="">Debits (to be implemented in the Assignment)</Link>
-        
-        <AccountBalance accountBalance={this.props.accountBalance}/>
-      </div>
+                <br></br><br></br><br></br><br></br>
+                <br></br><br></br><br></br><br></br>
+            <div>
+            <NavLink to="/userProfile" style={{color: "#ffe54c"}}>UserProfile</NavLink>
+                <br/>
+                <NavLink to="/login" style={{color: "#ffe54c"}}>Login</NavLink>
+                <br/>
+                <NavLink to="/credits" style={{color: "#ffe54c"}}>Credits</NavLink>
+                <br/>
+                <NavLink to="/debits" style={{color: "#ffe54c"}}>Debits</NavLink>
+            </div>
+            <br></br>
+                <AccountBalance accountBalance={this.props.accountBalance}/>
+            </div>
     );
   }
 }
