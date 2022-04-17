@@ -3,6 +3,7 @@
 
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
+import {NavLink} from 'react-router-dom';
 
 class LogIn extends Component {
   constructor () {  // Create and initialize state
@@ -40,18 +41,20 @@ class LogIn extends Component {
     // Render the login form
     return (
       <div>
+        <br></br>
+            <NavLink to="/" activeClassName="is-active" style={{color: "#ffe54c"}}>Return to Home</NavLink>
+            <br></br><br></br>
         <h1>Login</h1>
-
+        <br></br>
         <form onSubmit={this.handleSubmit}>
           <div>
-            <label htmlFor="userName">User Name</label>
-            <input type="text" name="userName" onChange={this.handleChange} value={this.state.user.userName} />
+            <label htmlFor ="userName">User Name:</label>
+            <input type="text" name="userName" style={{margin : "4px", display: 'inline-block'}} onChange={this.handleChange} value={this.state.user.userName} /><br></br>
+            <label htmlFor="password">  Password: </label>
+            <input type="password" name="password" style={{margin : "4px", display: 'inline-block'}} />
           </div>
-          <div>
-            <label htmlFor="password">Password</label>
-            <input type="password" name="password" />
-          </div>
-          <button>Log In</button>
+          <br></br>
+          <button class="logIn">Log In</button>
         </form>                  
       </div>
     )
