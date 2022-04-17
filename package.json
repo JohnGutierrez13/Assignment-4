@@ -1,7 +1,7 @@
 {
   "name": "bank-of-react",
   "version": "0.1.0",
-  "homepage": "http://JohnGutierrez13.github.io/Assignment-4",
+  "homepage": "https://JohnGutierrez13.github.io/Assignment-4",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
