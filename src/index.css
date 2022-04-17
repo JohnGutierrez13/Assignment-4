@@ -1,18 +1,160 @@
+h1 { 
+  color: #00d8ff; 
+  font-family: 'Trocchi', serif; 
+  font-size: 45px; 
+  font-weight: bold; 
+  line-height: 48px; 
+  margin: 0; 
+}
+
+h2{
+  text-align: center;
+  float: center;
+}
+
+.is-active{
+  color: #ffe54c; 
+  font-family: OCR A Std, monospace; 
+  font-size: 18px; 
+  font-weight: 400;  
+  letter-spacing: -1px; line-height: 1; 
+  text-align: left;
+  float: left;
+}
+
+form { 
+  color: white; 
+  font-family: 'Source Sans Pro', sans-serif; 
+  font-size: 16px; 
+  font-weight: bolder; 
+  line-height: 32px; 
+  margin-right: 24px; 
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  font-family: OCR A Std, monospace;
+  font-size: 18px; 
+  font-weight: 400; 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #faf6f4; 
   text-align: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+input, button {
+  font-size: 16px;
+  font-weight: bolder;
+  color : black;
+  letter-spacing: 1px;
+  padding: 6px 6px 6px;
+  outline: 0;
+  border: 2px solid rgb(99, 103, 104);
+  border-radius: 40px;
+  cursor: pointer;
+  position: relative;
+  background-color: #00d8ff;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-input, button {
-	margin: 5px;
+.input, button:after {
+  content: "";
+  background-color: whitesmoke;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  border-radius: 40px;
+  border: 1px solid rgb(99, 103, 104);
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+input, button:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+@media (min-width: 768px) {
+  input, button {
+    padding: 6px 14px 6px;
+  }
+}
+
+.react-logo{
+  display: inline-block;
+  border-radius:50%;
+  border:10px solid #00d8ff;
+  animation-name:rotate;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.react-logo , .react-logo:before , .react-logo:after{
+  position:absolute;
+  display: inline-block;
+  width:200px;
+  height:70px;
+  border-radius:50%;
+  border:10px solid #00d8ff;
+ }
+
+.nucleo , .react-logo , .react-logo:before , .react-logo:after {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: center;
+}
+
+.nucleo{
+  width:40px;
+  height:40px;
+  border-radius:100%;
+  background:#00d8ff;
+}
+
+.react-logo:before , .react-logo:after{
+  content:"";
+}
+
+.react-logo:after{
+  transform:rotate(-57deg);
+}
+
+.react-logo:before{
+  transform:rotate(57deg);
+}
+
+.title{
+font-size:60px;
+background:#222;
+color:#00d8ff;
+width:250px;
+margin:2px auto;
+text-align:center;
+}
+
+@keyframes rotate{
+
+  100%{
+    transform:rotate(360deg);
+  }
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+}
+
+.inlineSpace{
+  margin-left: 1em;
+}
+
+.logIn{
+  margin-left: 16.5em;
 }
